@@ -1,0 +1,9 @@
+{
+    "name": "action",
+    "version": "1.0.0",
+    "main": "./say.js",
+    "dependencies": {
+        "connect": "^3.7.0",
+        "express": "^4.17.1"
+    }
+}
