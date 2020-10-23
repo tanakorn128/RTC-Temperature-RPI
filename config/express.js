@@ -17,7 +17,12 @@ module.exports = function() {
     app.set('views', './app/views');
     app.set('view engine', 'jade');
 
+    app.use(bodyParser.urlencoded({
+        extended: true
+    }));
+    app.use(bodyParser.json());
 
     require('../app/routes/index.routes')(app);
+    require('../app/routes/use.route')(app);
     return app;
 };
