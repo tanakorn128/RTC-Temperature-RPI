@@ -5,6 +5,13 @@ html
     body
     h1= title
     if isLoggedIn
+     h3 You are logIn in.
+     form(name='logout',method='POST', action='logout')
+       div.action
+         input(type='submit', value='Logout')
+    else
+
+    if isLoggedIn
       h3 You are logged in.
        form(name='logout',method='POST', action='logout')
          div
@@ -17,6 +24,9 @@ html
         div
         label(for='password') Password
         input(name='password',type='password',placeholder='password')
+        div
+        input(name='remember', type='checkbox', value='remember')
+        |Remember
         div
         input(type='submit',value='Login')
         
