@@ -3,6 +3,8 @@ var morgan = require('morgan');
 var compression = require('compression');
 var bodyParser = require('body-parser');
 var cookieSession = require('cookie-session');
+var session = require('express-session');
+var RedisStore = require('connect-redis')(session);
 module.exports = function() {
     var app = express();
     if (process.env.NODE_ENV === 'development') {
@@ -10,6 +12,26 @@ module.exports = function() {
     } else {
         app.use(compression);
     }
+
+
+    /*app.use(cookieSession({
+        name: 'session',
+        keys: ['secret_key', 'secret_key2']
+    }));*/
+
+    app.use(session({
+        secret: 'secret_key',
+        resave: false,
+        saveUninitialized: true
+    }));
+    app.use(session({
+        host: 'localhost',
+        post: 6379,
+        db: 2,
+        pass: 'redis_password'
+    }));
+    secret: 'secret_key'
+
     app.use(bodyParser.urlencoded({
         extended: true
     }));
@@ -24,10 +46,6 @@ module.exports = function() {
     }));
     app.use(bodyParser.json());
 
-    app.use(cookieSession({
-        name: 'session',
-        keys: ['secret_key', 'secret_key2']
-    }));
 
     require('../app/routes/index.routes')(app);
     require('../app/routes/use.route')(app);

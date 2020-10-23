@@ -8,6 +8,8 @@
         "compression": "1.5.0",
         "body-parser": "1.13.0",
         "jade": "1.11.0",
-        "cookie-session": "1.2.0"
+        "cookie-session": "1.2.0",
+        "express-session": "1.11.0",
+        "connect-redis": "2.4.0"
     }
 }
