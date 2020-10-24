@@ -24,13 +24,13 @@ module.exports = function() {
         resave: false,
         saveUninitialized: true
     }));
-    app.use(session({
-        host: 'localhost',
-        post: 6379,
-        db: 2,
-        pass: 'redis_password'
-    }));
-    secret: 'secret_key'
+    /* app.use(session({
+         host: 'localhost',
+         post: 6379,
+         db: 2,
+         pass: 'redis_password'
+     }));
+     secret: 'secret_key'*/
 
     app.use(bodyParser.urlencoded({
         extended: true
