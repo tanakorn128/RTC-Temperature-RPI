@@ -1,4 +1,4 @@
 module.exports = {
-    mongoUri = 'mongodb://localhost/my-priject',
-    sessionSecret: "dev_Secret_key"
+    mongoUri = 'mongodb://localhost/test',
+    sessionSecret: "prod_Secret_key"
 };

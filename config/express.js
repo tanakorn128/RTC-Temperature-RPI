@@ -1,10 +1,13 @@
+var config = require('./config');
 var express = require('express');
 var morgan = require('morgan');
 var compression = require('compression');
 var bodyParser = require('body-parser');
 var cookieSession = require('cookie-session');
 var session = require('express-session');
+//const { mongoUri } = require('./env/production');
 var RedisStore = require('connect-redis')(session);
+
 module.exports = function() {
     var app = express();
     if (process.env.NODE_ENV === 'development') {
@@ -19,8 +22,11 @@ module.exports = function() {
         keys: ['secret_key', 'secret_key2']
     }));*/
 
+    //config.mongoUri
+    //config.sessionSecret
+
     app.use(session({
-        secret: 'secret_key',
+        secret: config.sessionSecret,
         resave: false,
         saveUninitialized: true
     }));
