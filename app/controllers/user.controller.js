@@ -1,3 +1,27 @@
+var User = require('mongoose').model('User');
+
+exports.create = function(req, res, next) {
+    var user = new User(req.body);
+    console.log(res.json(user));
+    user.save(function(err) {
+        if (err) {
+            return next(err);
+        } else {
+            res.json(user);
+        }
+    });
+};
+
+exports.list = function(req,res,next){
+    User.findOne({}, function(err, users){
+    if (err){
+       return next(err);
+    } else {
+     res.json(users);
+    }
+    });
+};
+
 exports.login = function(req, res) {
     // console.log(req.body);
     //console.log('Email: ' + req.body.email);
