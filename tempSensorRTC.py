@@ -1,6 +1,6 @@
 import sys
 import Adafruit_DHT
-import busio
+#import busio
 import adafruit_ds3231
 import requests
 
@@ -23,8 +23,8 @@ while True:
             "hour": t.tm_hour,
             "minute": t.tm_min
         }
-        res=requests.post('http://localhost:3009/addData',tempSensorRTC)
-        print(res) 
+        #res=requests.post('http://localhost:3009/addData',tempSensorRTC)
+        #print(res) 
         #print(str(humidity)+"% "+str(temperature)+"*C")
         #print(rtc.datetime)
         break
