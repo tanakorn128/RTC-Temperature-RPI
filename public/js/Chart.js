@@ -3,6 +3,52 @@
 
 var url = 'http://raspberrypi.local:3010/getdata';
 
+
+//----------------------------------------------------------------------------------------------------
+function makeRequest(method, url, data) {
+    return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.onload = function() {
+            if (this.status >= 200 && this.status < 300) {
+                resolve(xhr.response);
+            } else {
+                reject({
+                    status: this.status,
+                    statusText: xhr.statusText
+                });
+            }
+        };
+        xhr.onerror = function() {
+            reject({
+                status: this.status,
+                statusText: xhr.statusText
+            });
+        };
+        if (method == "POST" && data) {
+            xhr.send(data);
+        } else {
+            xhr.send();
+        }
+    });
+}
+
+//GET example
+makeRequest('GET', url).then(function(data) {
+    var results = JSON.parse(data);
+    console.log(results)
+});
+
+//----------------------------------------------------------------------------------------------------
+
+
+function processRequest(e) {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        let response = JSON.parse(xhr.responseText);
+        console.log(response);
+    }
+}
+
 fetch(url).then(function(response) {
     return response.json();
 }).then(function(data) {

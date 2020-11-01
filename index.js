@@ -4,7 +4,6 @@ var cors = require('cors');
 var db = mongoose();
 var app = express();
 
-
 app.use(cors());
 app.listen(3010);
 module.exports = app;
