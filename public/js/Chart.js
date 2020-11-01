@@ -1,8 +1,8 @@
 //const { json } = require("express");
 
 
-var url = 'http://raspberrypi.local:3010/getdata';
-
+var url = 'http://localhost:3010/getdata';
+//var url = 'http://raspberrypi.local:3010/getdata';
 
 //----------------------------------------------------------------------------------------------------
 function makeRequest(method, url, data) {
@@ -57,7 +57,7 @@ fetch(url).then(function(response) {
     let update = JSobj.length - 1;
 
     //console.log(obj);
-    console.log(update);
+    // console.log(update);
     //console.log(JSobj[update]["temperature"]);
 
     console.log(JSobj[update]["year"] + " " + JSobj[update]["month"] + " " + JSobj[update]["day"]);

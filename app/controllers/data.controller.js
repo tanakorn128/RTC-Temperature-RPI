@@ -1,5 +1,4 @@
 var Data = require('mongoose').model('temp_rtc');
-var cors = require('cors');
 var addData = function(req, res, next) {
     var data = new Data(req.body);
     //console.log(req.body.humidity);
