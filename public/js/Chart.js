@@ -1,5 +1,5 @@
-var url = 'http://localhost:3010/getdata';
-//var url = 'http://raspberrypi.local:3010/getdata';
+//var url = 'http://localhost:3010/getdata';
+var url = 'http://raspberrypi.local:3010/getdata';
 
 const http = new XMLHttpRequest()
 
