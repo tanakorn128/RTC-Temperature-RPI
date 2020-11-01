@@ -17,7 +17,6 @@ var getData = (req, res, next) => {
         if (err) {
             return next(err);
         } else {
-            app.use(cors());
             res.json(data);
         }
     });
