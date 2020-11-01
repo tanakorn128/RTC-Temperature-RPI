@@ -41,7 +41,7 @@ makeRequest('GET', url).then(function(data) {
 
 //----------------------------------------------------------------------------------------------------
 
-
+/*
 function processRequest(e) {
     if (xhr.readyState == 4 && xhr.status == 200) {
         let response = JSON.parse(xhr.responseText);
@@ -112,4 +112,4 @@ fetch(url).then(function(response) {
             responsive: true
         }
     });
-})
+})*/
