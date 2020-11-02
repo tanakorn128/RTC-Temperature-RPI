@@ -3,13 +3,9 @@ var express = require('./config/express');
 var cors = require('cors');
 var db = mongoose();
 var app = express();
+var render = function(req, res) {
 
-app.use(function(res, req, next) {
-    res.header('Access-Control-Allow-Origin', "*");
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.headers('Access-Control-Allow-Headers', 'Content=Type');
-    next();
-});
+}
 app.use(cors());
 app.listen(3010);
 module.exports = app;
