@@ -11,6 +11,8 @@ module.exports = () => {
     }));
     app.use(express.static('./public'));
     app.use(bodyParser.json());
+
+
     app.set('views', './app/views');
     app.set('view engine', 'jade');
     require('../app/routes/index.route')(app);
