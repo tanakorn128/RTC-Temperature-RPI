@@ -18,6 +18,7 @@ var getData = (req, res, next) => {
         } else {
             res.json(data);
         }
+        console.log(data);
     });
 
 
