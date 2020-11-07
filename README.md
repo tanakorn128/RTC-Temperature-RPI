@@ -2,7 +2,7 @@
 อธิบายการทำงาน
 1.	app -> views -> Index.jade 
 จะมีการสร้าง table สำหรับการแสดงข้อมูลในรูปของตาราง
-2.	public -> js -< lib -> Chart.js   
+2.	public -> js -> lib -> Chart.js 
 เป็น library Chart.js   การสร้าง JavaScript charts สร้างกราฟ และแสดงผลบน canvas
 3.	public -> js -< lib ->res01.js
 การอ่านข้อมูล update ข้อมูลของกราฟที่นี
