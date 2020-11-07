@@ -8,7 +8,7 @@
 การอ่านข้อมูล update ข้อมูลของกราฟที่นี
 4.	index.route.js 
 จะเป็นการรับ required ซึ่งกำหนดไว้ เป็น Get และ Post 
-5.	data.controller.js 
+5.	app -> controllers -> data.controller.js 
 เมื่อมี required เข้ามาจาก index.route.js จะมาทำงานในนี้ 
 addData เมื่อมีการ  required save ข้อมูลลง mongoDB โดยใช้ module ที่ได้สร้างไว้แล้ว
 getData เป็นการ required และแสดงมูลข้อมูลในฐานข้อมูล
