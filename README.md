@@ -1,7 +1,7 @@
 # RTC-Temperature-RPI
 
 ![GitHub Logo](/img/1.png)
-### index .js
+# index .js
 ```javascript
 var mongoose = require('./config/mongoose');
 var express = require('./config/express');
@@ -26,7 +26,7 @@ module.exports = app;
 
 console.log('Server running at http://localhost:3010');
 
-###temp_rtc.model.js
+# temp_rtc.model.js
 ```javascript
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
@@ -43,7 +43,7 @@ var tempSensorRTCSchema=new Schema({
 const temp_rtc=mongoose.model('temp_rtc',tempSensorRTCSchema);
 module.exports={temp_rtc}
 ```
-###index.route.js
+# index.route.js
 ```javascript
 module.exports = (app) => {
     var index = require('../controllers/data.controller');
