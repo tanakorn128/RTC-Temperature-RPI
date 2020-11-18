@@ -40,6 +40,8 @@ var tempSensorRTCSchema=new Schema({
     hour: Number,
     minute: Number
 });
+const temp_rtc=mongoose.model('temp_rtc',tempSensorRTCSchema);
+module.exports={temp_rtc}
 ```
 ###index.route.js
 ```javascript
@@ -51,11 +53,8 @@ module.exports = (app) => {
 
 }
 ```
-const temp_rtc=mongoose.model('temp_rtc',tempSensorRTCSchema);
-module.exports={
-    temp_rtc
-}
-```
+
+
 
 
 
