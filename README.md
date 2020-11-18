@@ -1,4 +1,7 @@
 # RTC-Temperature-RPI
+
+![GitHub Logo](/img/1.png)
+
 อธิบายการทำงาน
 1.	app -> views -> Index.jade 
 จะมีการสร้าง table สำหรับการแสดงข้อมูลในรูปของตาราง
